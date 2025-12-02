@@ -21,31 +21,55 @@ In this implementation of the pattern we will have the following correspondences
 - Concrete Originator -> ShoppingCart
 - ConcreteMemento -> ShoppingCartMemento
 
-## 2 - Exercises
+Here is the full text translated into UK English and formatted in Markdown:
 
-1. Level 1
-   1. Start by running the program, familiarizing yourself with the GUI and features provided. Notice that the Undo button is not working.
-   2. Change the **ShoppingCart** class so that it implements the **Originator** interface.
-   3. Implement the *inner class* **ShoppingCartMemento**, which implements the Memento interface
+---
+#Exercicies
 
-2. Level 2
-   1. Create the **Caretaker** class, with the following attributes:
-      - **Memento memento**
-      - **Originator originator**
-   2. Implement the Constructor method.
-   3. Implement the **void saveState()** method, which should obtain and save the current Memento.
-   4. Implement the **void restoreState()** method, which should reestablish the state of the **originator** based on the saved **Memento**. If there is no **Memento** saved, you must throw the exception **NoMementoException**.
+## 1. Exercise 1
 
-3. Level 3
-   1. Add a **Caretaker** attribute to **ShoppingCartController**.
-   2. Modify the **addProduct**, **reset** and **removeProduct** methods so that it starts saving the previous state, each time the shopping cart state is modified.
-   3. Implement the **void undo()** method that uses the **caretaker** instance to retrieve the previous state of the shopping cart.
-   4. Modify the **ShoppingCartPanel** class to add behavior to the **buttonUndo** button, to allow **an undo** after inserting a product into the shopping list.
-4. Level 4
-   1. Add the **buttonReset** button in the **ShoppingCartPanel** class and add it next to the **Undo** button.
-   2. Add the **buttonReset** button behavior to reset the shopping list.
-   3. Verify that the *undo* feature continues to work as expected.
-5. Level 5
-   1. Change the Caretaker class to implement multiple undo operations.
+1. Start by running the programme to familiarise yourself with the GUI and the available features. Note that the **Undo** button is not working.
+2. Modify the **ShoppingCart** class so that it implements the **Originator** interface.
+3. Implement the **inner class** **ShoppingCartMemento**, which must implement the **Memento** interface.
+4. Create the **Caretaker** class with the following attributes:
 
-(end of statement)
+   * **Memento memento**
+   * **Originator originator**
+5. Implement the constructor.
+6. Implement the method **void saveState()**, which must retrieve and store the current Memento.
+7. Implement the method **void restoreState()**, which must restore the state of the **originator** based on the stored **Memento**. If no **Memento** exists, the method must throw the exception **NoMementoException**.
+
+---
+
+## 2. Exercise 2
+
+1. Add a **Caretaker** attribute to **ShoppingCartManager**.
+2. Modify the methods **addProduct**, **reset**, and **removeProduct** so that the previous state is stored whenever the shopping cart is modified.
+3. Implement the method **void undo()**, which uses the **caretaker** instance to retrieve the previous state of the shopping cart.
+4. Modify the **ShoppingCartPanel** class to add behaviour to the **buttonUndo**, enabling **one undo** after inserting a product into the shopping list.
+
+---
+
+## 3. Exercise 3
+
+* Modify the **Caretaker** class so that it supports multiple undo operations.
+
+---
+
+## 4. Exercise 4
+
+1. Add the **buttonReset** to the **ShoppingCartPanel** class, placing it next to the **Undo** button.
+2. Add the behaviour for **buttonReset** so that it resets the shopping list.
+3. Confirm that the *undo* functionality continues to work as expected.
+
+---
+
+## 5. Exercise 5
+
+1. Add the **buttonRemove** to the **ShoppingCartPanel** class, placing it next to the **Add** button.
+2. Add the behaviour for **buttonRemove** so that it removes the selected product from the shopping list.
+3. Confirm that the *undo* functionality continues to work as expected.
+
+---
+
+*(end of instructions)*
