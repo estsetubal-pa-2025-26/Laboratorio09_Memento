@@ -12,7 +12,6 @@ public class GUI extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
         Scene scene = new Scene(new ShoppingCartPanel().getGridPaneMain());
         stage.setTitle("Shopping Cart");
         stage.setScene(scene);

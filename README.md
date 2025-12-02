@@ -39,7 +39,7 @@ Nesta implementação do padrão teremos as seguintes correspondências:
    4. Implemente o método **void restoreState()**, que deverá reestabelecer o estado do **originator** com base no **Memento** guardado. Se não existir **Memento** guardado, deve lançar a exceção **NoMementoException**.
    
 3. Nível 3
-   1. Adicione um atributo **Caretaker** ao **ShoppingCartController**.
+   1. Adicione um atributo **Caretaker** ao **ShoppingCartManager**.
    2. Modifique os métodos **addProduct**, **reset** e **removeProduct** para que passe a guardar o estado anterior, a cada modificação do estado do carrinho de compras.
    3. Implemente o método **void undo()** que utiliza a instância **caretaker** para recuperar o estado anterior do carrinho de compras.
    4. Modifique a classe **ShoppingCartPanel** de forma a adicionar o comportamento ao botão **buttonUndo**, de forma a permitir **um undo** após inserção de um produto na lista de compras.

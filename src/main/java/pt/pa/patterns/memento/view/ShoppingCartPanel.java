@@ -2,17 +2,19 @@ package pt.pa.patterns.memento.view;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Pos;
+
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import pt.pa.patterns.memento.model.Product;
-import pt.pa.patterns.memento.model.ShoppingCartController;
+import pt.pa.patterns.memento.model.ShoppingCartManager;
+
+import java.nio.file.attribute.PosixFileAttributes;
 
 public class ShoppingCartPanel {
 
-    private ShoppingCartController shoppingCartController;
+    private ShoppingCartManager shoppingCartController;
     private ListView<Product> listViewCartContents;
 
     private Button buttonUndo;
@@ -26,7 +28,7 @@ public class ShoppingCartPanel {
     }
 
     public ShoppingCartPanel() {
-        shoppingCartController = new ShoppingCartController();
+        shoppingCartController = new ShoppingCartManager();
         gridPaneMain = new GridPane();
 
         // Add product
@@ -43,7 +45,7 @@ public class ShoppingCartPanel {
         HBox hBoxAddProductButtons = new HBox();
         buttonAddProduct = new Button("Add");
         hBoxAddProductButtons.getChildren().add(buttonAddProduct);
-        hBoxAddProductButtons.setAlignment(Pos.CENTER_RIGHT);
+
         hBoxAddProductButtons.setStyle("-fx-padding: 2px 0 0 0");
         gridPaneAddProduct.add(hBoxAddProductButtons, 1, 3);
 
@@ -61,7 +63,6 @@ public class ShoppingCartPanel {
         buttonUndo = new Button("Undo");
         HBox hBoxUndo = new HBox();
         hBoxUndo.getChildren().add(buttonUndo);
-        hBoxUndo.setAlignment(Pos.CENTER_RIGHT);
         hBoxUndo.setStyle("-fx-padding: 2px 0 0 0");
         gridPaneCartContents.add(hBoxUndo, 0, 2);
         GridPane.setHgrow(listViewCartContents, Priority.ALWAYS);

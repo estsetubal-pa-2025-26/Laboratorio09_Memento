@@ -10,7 +10,7 @@ import pt.pa.patterns.memento.model.NoMementoException;
 public class Main {
     public static void main(String[] args) throws NoMementoException {
         /*
-        ShoppingCartController cart = new ShoppingCartController();
+        ShoppingCartController cart = new ShoppingCartManager();
         cart.addProduct("Chewing Gum", 0.1);
         cart.addProduct("Powerbank", 30);
         cart.addProduct("PS4", 350);
